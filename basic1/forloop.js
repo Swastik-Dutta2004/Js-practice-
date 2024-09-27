@@ -28,17 +28,17 @@ for (let index = 0; index < myArray.length; index++) {
 
 for (let i = 1; i < 20; i++) {
     if (i == 5) {
-        console.log("detected 5");
-        break
+//         console.log("detected 5");
+//         break
     }
-    console.log(`value of i ${i}`);
+//     console.log(`value of i ${i}`);
 }
 
 
 for (let i = 1; i < 20; i++) {
     if (i == 5) {
-        console.log("detected 5");
-        continue
+        // console.log("detected 5");
+        // continue
     }
-    console.log(`value of i ${i}`);
+    // console.log(`value of i ${i}`);
 }
