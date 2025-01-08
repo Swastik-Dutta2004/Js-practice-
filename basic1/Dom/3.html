@@ -25,5 +25,16 @@
         document. querySelector('.language').appendChild(li)
     }
     addOptiLanguage('golang')
+
+    const secondlang = document.querySelector("li:nth-child(2)")
+   const newli = document.createElement('li')
+   newli.textContent = "mojo"
+   secondlang.replaceWith(newli)
+
+   const firstlang = document.querySelector("li:first-child")
+   firstlang.outerHTML = '<li>Typscript<\li>'
+
+   const lastchild = document.querySelector('li:last-child')
+   lastchild.remove()
 </script>
 </html>
