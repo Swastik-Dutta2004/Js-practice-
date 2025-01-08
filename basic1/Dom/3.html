@@ -11,12 +11,19 @@
     </ul>
 </body>
 <script>
-    function addlanguage?(langName){
+    function addlanguage(langName){
        const li =  document.createElement('li');
        li.innerHTML = `${langName}`
        document.querySelector('.language').appendChild(li)
     }
     addlanguage('python')
     addlanguage("typescript")
+
+    function addOptiLanguage(langnname){
+       const li =  document.createElement('li');
+        li.appendChild(document.createTextNode(langnname))
+        document. querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('golang')
 </script>
 </html>
