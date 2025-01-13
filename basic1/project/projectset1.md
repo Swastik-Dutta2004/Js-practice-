@@ -67,3 +67,75 @@ setInterval(function(){
   clock.innerHTML = date.toLocaleTimeString()
 },1000)
 ```
+
+## project 4
+
+```javascript
+let randomNumber = parseInt(Math.random() * 100 + 1);
+
+const submit = document.querySelector('#subt');
+const userInput = document.querySelector('#guessField');
+const guessSlot = document.querySelector('.guesses');
+const remaining = document.querySelector('.lastResult');
+const lowOrHi = document.querySelector('.lowOrHi');
+const startOver = document.querySelector('.resultParas');
+
+const p = document.createElement('p');
+
+let prevGuess = [];
+let numGuess = 1;
+
+let playGame = true;
+
+
+if (playGame) {
+  submit.addEventListener('click', function (e) {
+    e.preventDefault();
+    const guess = parseInt(userInput.value);
+    console.log(guess);
+    validateGuess(guess);
+  });
+}
+
+function validateGuess(guess) {
+  if(NaN(guess)){
+    alert('please enter a valid number')
+  }else if(guess<1){
+    alert('enter a number that is more than 1')
+  }else if(guess>100){
+    alert('please enter a number that is less than 100')
+  }else{
+    prevGuess.push(guess);
+    if (numGuess === 11){
+      displayGuess(guess)
+      displayMessage(`Game over.Random number was ${randomNumber}`)
+      endGame()
+    }else{
+      displayGuess(guess)
+      cheakGuess(guess)
+    }
+  }
+}
+function cheakGuess(guess) {
+  if(guess === randomNumber){
+    displayMessage('you gussed it wright')
+  }else if(guess > randomNumber){
+    displayMessage('your numnber is too high')
+  }else if(guess < randomNumber){
+    displayMessage('your numnber is too low')
+  }
+}
+function displayGuess(guess) {
+  
+}
+function displayMessage(message) {
+  //
+}
+function endGame() {
+  //
+}
+function startGame() {
+  //
+}
+
+```
