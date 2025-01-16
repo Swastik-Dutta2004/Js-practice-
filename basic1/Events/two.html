@@ -13,14 +13,13 @@
     const saySwastik = function(){
         console.log("swastik");
     }
-    const changeText = function(){document.querySelector('h1').innerHTML = "Swastik the goat"
+    const changeText = function(){document.querySelector('h1').innerHTML = "Aaj ke liye bas itna hi Aap ki tarah mein bhi mayoos hoon,lekin umeed par duniya kayam hai, dil dukha hai par toota toh nahi hai aur umeed ka daman chuta toh nahi hai"
     }
    const changeMe = setTimeout(changeText,2000)
 
    document.querySelector('#stop').addEventListener('click',function()
    {
     clearTimeout(changeMe)
-    console.log("STOPPED");
     
    })
 </script>
