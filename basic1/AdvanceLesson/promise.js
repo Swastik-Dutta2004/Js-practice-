@@ -54,7 +54,7 @@ promisefour.then(function(user){
     console.log(error);
 })
 .finally(function(){
-    console.log("The promise is ethire resolve or resjected"); 
+    console.log("The promise is ethire resolve or rejected"); 
 })
 
 
@@ -62,16 +62,21 @@ const promisefive = new Promise (function(resolve,resject){
     setTimeout(function(){
     let error = true
     if(!error){
-        resolve({username:"sawstik dutta",password:"1234556"})
+        resolve({username:"swastik dutta",password:"1234556"})
     }
     else{
-        resject('ERROR: some error has come')
+        resject('ERROR: some error has came.')
     }        
     },1000)
 });
 
 async function consumepromiseFive(){
-    const response = await promisefive
-    console.log(response); 
+    try {
+        const response = await promisefive
+        console.log(response);  
+    } catch (error) {
+        console.log(error);
+        
+    }
 }
-    
+consumepromiseFive()
