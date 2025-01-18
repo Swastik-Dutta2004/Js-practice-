@@ -98,7 +98,7 @@ consumepromiseFive()
     .then((response)=>{
         return response.json()
     })
-    .then((data)=>{
+    .then((data)=>{e
         console.log(data);
     })
     .catch((error)=>{
