@@ -23,5 +23,42 @@ Array.prototype.swa = function(){
     
 }
 
-myhero.swastik()
-myhero.swa()
+// myhero.swastik()
+// myhero.swa()
+
+//inhertance
+
+const user = {
+    name :"chai    ",
+    email:"cfbdfkjdfdjsdbjd"
+}
+
+const Teacher = {
+    makeViedo: true
+}
+
+const TeacherSupport = {
+    isAvailable: false
+}
+const TAsupport = {
+    makeAssigmnt: "Js assignment",
+    fullTime: true,
+    __proto__:TeacherSupport
+}
+
+Teacher.__proto__ = user
+
+//morden system
+
+Object.setPrototypeOf(TeacherSupport,Teacher)
+
+let anothertype = "chiaaurcode   "
+
+String.prototype.truelength = function(){
+    console.log(`${this}`);
+    console.log(`true length is: ${this.trim().length}`);
+}
+
+anothertype.truelength()
+"swastik".truelength()
+"briyani".truelength()
